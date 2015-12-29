@@ -1,2 +1,2 @@
 # ionictest
-Läsmig
+Förhoppningsvis blir detta en app enligt instruktionerna.
