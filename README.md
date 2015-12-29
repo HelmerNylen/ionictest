@@ -1,5 +1,6 @@
 # ionictest
 Läsmig
-<br/>\n
-<newline plz>
+<br/>
 Mer text
+
+<marquee>Behold my HTML skills</marquee>
