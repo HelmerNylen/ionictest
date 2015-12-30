@@ -1,5 +1,26 @@
-/* Empty. Add your own CSS if you like */
 h1 {
 	text-align: center;
 	color: #110808;
+}
+
+.ListElement .title {
+	font-weight: bold;
+	color: #110808;
+}
+
+.ListElement img
+{
+	width: 30px;
+	height: 30px;
+}
+
+.ListElement .desc
+{
+	color: #332424;
+}
+
+.PleaseWait {
+	font-size: 18px;
+	text-align: center;
+	padding-top: 10px;
 }

@@ -1,9 +1,14 @@
-<ion-view view-title="Playlists">
+<ion-view view-title="GitHub">
   <ion-content>
-    <ion-list>
-      <ion-item ng-repeat="playlist in playlists" href="#/app/playlists/{{playlist.id}}">
-        {{playlist.title}}
+    <ion-list ng-if="data.length != 0">
+      <ion-item ng-repeat="obj in data" href="#/app/playlists/{{playlist.id}}" class="ListElement">
+        <span class="title">{{ obj.name }}: </span>
+		<span class="desc">{{ obj.description }}</span>
       </ion-item>
     </ion-list>
+	
+	<p class="PleaseWait">
+		V&auml;nta lite...
+	</p>
   </ion-content>
 </ion-view>
