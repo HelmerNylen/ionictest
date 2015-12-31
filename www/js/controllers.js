@@ -20,8 +20,10 @@ angular.module('starter.controllers', [])
 		if ($scope.link)
 		{
 			$scope.link = $scope.link.replace("http://", "").replace("https://", "");
+			
 			if ($scope.link.length > 4 && $scope.link.substring(0, 4) == "www.")
 				$scope.link = $scope.link.substring(4);
+			
 			if ($scope.link[$scope.link.length - 1] == '/')
 				$scope.link = $scope.link.substring(0, $scope.link.length - 1);
 		}
