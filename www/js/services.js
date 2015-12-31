@@ -1,4 +1,5 @@
 angular.module('starter.services', [])
+//service för att hämta data från github
 .factory('GitService', function($http, $state) {
 	var data = [];
 	
@@ -16,4 +17,21 @@ angular.module('starter.services', [])
 			return data;
 		}
 	}
+})
+//service för att skicka data till detaljvyn
+.factory('DetailService', function($http) {
+	var data = null;
+
+	return {
+		set: function(obj) {
+			data = obj;
+		},
+		get: function() {
+			return data;
+		},
+		clear: function() {
+			data = null;
+		}
+	}
 });
+

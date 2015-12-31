@@ -1,14 +1,14 @@
 <ion-view view-title="GitHub">
   <ion-content>
     <ion-list ng-if="data.length != 0">
-      <ion-item ng-repeat="obj in data" href="#/app/playlists/{{playlist.id}}" class="ListElement">
+      <ion-item ng-repeat="obj in data" ng-click="details(obj)" class="ListElement">
         <span class="title">{{ obj.name }}: </span>
 		<span class="desc">{{ obj.description }}</span>
       </ion-item>
     </ion-list>
 	
-	<p class="PleaseWait">
-		V&auml;nta lite...
+	<p ng-if="data.length == 0" class="PleaseWait">
+		Vänta lite...
 	</p>
   </ion-content>
 </ion-view>

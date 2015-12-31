@@ -1,0 +1,68 @@
+<ion-view ng-if="obj != null" view-title="Detaljer">
+  <ion-content id="details">
+		<h1>{{ obj.name }}</h1>
+		<div>{{ obj.description }}</div>
+		<br/>
+		<table>
+			<tr>
+				<td class="title">
+					Ägare
+				</td>
+				<td class="data">
+					<a href="{{ obj.owner.html_url }}" target="_blank"><img src="{{ obj.owner.avatar_url }}"></a>
+					<a href="{{ obj.owner.html_url }}" target="_blank">
+						{{ obj.owner.login }}
+					</a>
+				</td>
+			</tr>
+			<tr>
+				<td class="title">
+					Skapat
+				</td>
+				<td class="data">
+					{{ creationTime }}
+				</td>
+			</tr>
+			<tr>
+				<td class="title">
+					ID
+				</td>
+				<td class="data">
+					{{ obj.id }}
+				</td>
+			</tr>
+			<tr>
+				<td class="title">
+					Forks
+				</td>
+				<td class="data">
+					{{ obj.forks_count }} st
+				</td>
+			</tr>
+			<tr ng-if="obj.homepage">
+				<td class="title">
+					Hemsida
+				</td>
+				<td class="data">
+					<a href="{{ obj.homepage }}" target="_blank">
+						{{ obj.homepage }}
+					</a>
+				</td>
+			</tr>
+		</table>
+		<br/>
+		<div>
+			<a href="{{ obj.html_url }}" target="_blank">
+				<button class="button button-positive">
+					Se projektet på GitHub
+				</button>
+			</a>
+		</div>
+  </ion-content>
+</ion-view>
+
+<ion-view ng-if="obj == null" view-title="Fel">
+  <ion-content>
+    <h3 style="text-align: center; padding-top: 20px;">Nä nu gick det fel... Prova igen :)</h1>
+  </ion-content>
+</ion-view>
