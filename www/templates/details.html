@@ -33,7 +33,7 @@
 			</tr>
 			<tr>
 				<td class="title">
-					Forks
+					Antal forks
 				</td>
 				<td class="data">
 					{{ obj.forks_count }} st
@@ -44,25 +44,23 @@
 					Hemsida
 				</td>
 				<td class="data">
-					<a href="{{ obj.homepage }}" target="_blank">
-						{{ obj.homepage }}
-					</a>
+					{{ link }}
 				</td>
 			</tr>
 		</table>
 		<br/>
-		<div>
+		<!--div>
 			<a href="{{ obj.html_url }}" target="_blank">
 				<button class="button button-positive">
 					Se projektet på GitHub
 				</button>
 			</a>
-		</div>
+		</div-->
   </ion-content>
 </ion-view>
 
 <ion-view ng-if="obj == null" view-title="Fel">
   <ion-content>
-    <h3 style="text-align: center; padding-top: 20px;">Nä nu gick det fel... Prova igen :)</h1>
+    <h3 style="text-align: center; padding-top: 20px;">Nej nu gick det fel... Prova igen :)</h1>
   </ion-content>
 </ion-view>
